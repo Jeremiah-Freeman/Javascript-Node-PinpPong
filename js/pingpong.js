@@ -18,4 +18,20 @@ Calculator.prototype.pingPong = function(goal) {
   return output;
 };
 
+Calculator.prototype.arith = function(first, second, sign){
+  var output = 0;
+  if(sign === "add"){
+    output = first + second;
+  }else if (sign === "sub"){
+    output = first - second;
+  }else if (sign === "divide"){
+    output = first / second;
+  }else if (sign === "mult"){
+    output = first * second;
+  }else {
+    output = "error";
+  }
+  return output;
+};
+
 exports.calculatorModule = Calculator;
